@@ -1,6 +1,6 @@
 # DAW2-ToDoList
 
-Esta aplicación permite a sus usuarios gestionar tareas permitiendo organizar su trabajo. Un usuario puede crear infinidad de tareas y, estas, puede están gestionadas en tres apartados según su estado. También,el usuario podrá gestionar el orden en el que las tareas aparecen según distintos criterios como puede ser la fecha de creación. Toda tarea puede ser creada, editada y eliminada. 
+Esta aplicación permite a sus usuarios gestionar tareas permitiendo organizar su trabajo. Un usuario puede crear infinidad de tareas y, estas, puede están gestionadas en tres apartados según su estado. También,el usuario podrá gestionar el orden en el que las tareas aparecen según distintos criterios como puede ser la fecha de creación. Toda tarea puede ser creada, editada y eliminada. Para acceder a la tarea debe moverse al apartado de master de Git, ahora mismo está en main, para poder acceder al proyecto desarrollado y ver su contenido.
 
 ## Tecnologías empleadas
 
