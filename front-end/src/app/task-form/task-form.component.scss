@@ -1,0 +1,30 @@
+.form-container{
+    background-color: #37b15c;
+    border-radius: 0.4rem;
+    padding: 0.65rem;
+    font-size: 2rem;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    color: #1d1f30;
+    
+    p {
+        margin: 0;
+        transform: translateY(-4px);
+    }
+    input {
+        flex-grow: 1;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        margin-left: 2rem;
+        padding: 0;
+        font-size: 0.5em;
+        color: white;
+    }
+
+    .icon {
+        cursor: pointer;
+    }
+}

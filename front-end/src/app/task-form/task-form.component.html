@@ -1,0 +1,5 @@
+<div class = "form-container">  
+    <input type="text" placeholder="Añadir una nueva tarea" [(ngModel)]="taskName"(keyup.enter)="sendMessage()">
+    <mat-icon class="icon" (click)="clearTextArea()">delete</mat-icon>
+    <mat-icon class="icon" name="addTask" (click)="sendMessage()">playlist_add</mat-icon>
+</div>

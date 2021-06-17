@@ -1,0 +1,52 @@
+<div class="list">
+    <div class = "top-container">
+        <h3>Pendiente <mat-icon>help</mat-icon></h3>
+        <mat-button-toggle-group name="sort" class = "toggle">
+            <mat-button-toggle (click)="sortList(sortByDate)" value="date">Fecha</mat-button-toggle>
+            <mat-button-toggle (click)="sortList(sortByName)" value="name">Nombre</mat-button-toggle>
+            <mat-button-toggle value="sortList(sortByStatus)">Estado</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+    <div class = "task__list__container">
+        <ul *ngFor="let task of taskList" class = "task__list">
+            <li *ngIf="task.status == 'pending'" class = "list__item">
+                <div class="task__interior__left">
+                    <div class = "btn__check" (click)="markTaskAsInProgress(task)">&#10003;</div>
+                    {{task.name}}
+                </div>
+                <mat-icon class="icon" (click)="deleteTask(task)">delete</mat-icon>
+            </li>
+        </ul>
+    </div>
+    <h3>En desarrollo <mat-icon>access_time</mat-icon> </h3> 
+    <div class = "task__list__container">
+        <ul *ngFor="let task of taskList" class = "task__list">
+            <li *ngIf="task.status == 'inProgress'" class = "list__item">
+                <div class="task__interior__left">
+                    <div class = "btn__check" (click)="markTaskAsCompleted(task)">&#10003;</div>
+                    {{task.name}}
+                </div>
+                <mat-icon class="icon" (click)="deleteTask(task)">delete</mat-icon>
+            </li>
+        </ul>
+    </div>
+
+    <h3>Tareas completadas <mat-icon>done</mat-icon></h3>
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Ver historial
+          </mat-panel-title>
+          <mat-icon>list</mat-icon>
+        </mat-expansion-panel-header>
+        <ul *ngFor="let task of taskList" class = "task__list">
+            <li *ngIf="task.status == 'done'" class = "list__item">
+                <div class="task__interior__left">
+                    {{task.name}}
+                </div>
+                <mat-icon class="icon" (click)="deleteTask(task)">delete</mat-icon>
+            </li>
+        </ul>
+      </mat-expansion-panel>
+    <app-task-form (messageEvent)="addTask($event)" class = "taskform"></app-task-form>
+</div>
